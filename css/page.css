@@ -1,4 +1,4 @@
-/* --- استایل‌های کلی و فونت --- */
+
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
 
 * {
@@ -9,41 +9,41 @@
 
 body {
     font-family: 'Vazirmatn', sans-serif;
-    background-color: #000; /* رنگ پس‌زمینه اصلی */
+    background-color: #000; 
     color: #fff;
     height: 100vh;
-    overflow: hidden; /* جلوگیری از نمایش اسکرول بار */
+    overflow: hidden; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* --- بک‌گراند متحرک (کانواس) --- */
+
 #coding-bg {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* می‌اره بک‌گراند به لایه زیرین */
+    z-index: -1; 
 }
 
-/* --- کانتینر اصلی محتوا --- */
+
 .container {
     text-align: center;
     z-index: 1;
     padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.6); /* پس‌زمینه نیمه‌شفاف برای خوانایی بهتر */
+    background-color: rgba(0, 0, 0, 0.6); 
     border-radius: 15px;
-    backdrop-filter: blur(5px); /* افکت محو شدن پس‌زمینه */
+    backdrop-filter: blur(5px); 
 }
 
-/* --- استایل متن خوش‌آمدگویی --- */
+
 .welcome-text {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0; /* سایه درخشان */
+    text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0; 
     animation: glow 2s ease-in-out infinite alternate;
 }
 
@@ -52,30 +52,30 @@ body {
     to { text-shadow: 0 0 20px #0f0, 0 0 30px #0f0, 0 0 40px #0f0; }
 }
 
-/* --- استایل دکمه اصلی --- */
+
 .cta-button {
     display: inline-block;
     padding: 15px 40px;
     font-size: 1.2rem;
     font-weight: bold;
     color: #000;
-    background-color: #0f0; /* رنگ سبز ماتریکس */
+    background-color: #0f0; 
     text-decoration: none;
     border-radius: 50px;
     border: 2px solid #0f0;
-    transition: all 0.3s ease-in-out; /* انیمیشن نرم برای تمام تغییرات */
+    transition: all 0.3s ease-in-out; 
     box-shadow: 0 0 10px #0f0;
-    /* استایل لوگوی گیت‌هاب داخل دکمه */
+    
 .cta-button svg {
-    vertical-align: middle; /* برای هم‌تراز کردن لوگو با متن */
-    margin-left: 10px;     /* فاصله بین لوگو و متن */
-    fill: currentColor;    /* مهم: باعث میشه رنگ لوگو مثل رنگ خود دکمه باشه */
+    vertical-align: middle; 
+    margin-left: 10px;     
+    fill: currentColor;    
 }
 }
 
-/* --- افکت هاور (وقتی موس میره روش) --- */
+
 .cta-button:hover {
-    /* اینجا افکت بزرگ و کوچیک شدن پیاده‌سازی میشه */
+    
     animation: pulse 0.6s infinite;
     background-color: #fff;
     color: #000;
@@ -88,23 +88,24 @@ body {
     100% { transform: scale(1); }
 
 }
-/* --- استایل عکس پروفایل --- */
+
 .profile-pic {
-    position: fixed; /* موقعیت ثابت نسبت به صفحه */
-    top: 20px;       /* ۲۰ پیکسل فاصله از بالا */
-    right: 20px;     /* ۲۰ پیکسل فاصله از راست (چون صفحه راست‌به‌چپ هست) */
-    width: 80px;     /* عرض عکس */
-    height: 80px;    /* ارتفاع عکس (برای دایره بودن باید با عرض برابر باشه) */
-    border-radius: 50%; /* این کد عکس رو به شکل دایره درمیاره */
-    border: 3px solid #0f0; /* یه حاشیه سبز رنگ برای هماهنگی با تم */
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); /* یه سایه درخشان سبز */
-    z-index: 10; /* میاره عکس رو روی لایه‌های دیگه */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* انیمیشن نرم برای هاور */
-    cursor: pointer; /* وقتی موس میره روش، تبدیل به دست میشه */
+    position: fixed; 
+    top: 20px;       
+    right: 20px;     
+    width: 80px;     
+    height: 80px;    
+    border-radius: 50%; 
+    border: 3px solid #0f0; 
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); 
+    z-index: 10; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    cursor: pointer; 
 }
 
-/* افکت هاور برای عکس پروفایل */
+
 .profile-pic:hover {
-    transform: scale(1.1); /* وقتی موس میره روش، کمی بزرگتر میشه */
-    box-shadow: 0 0 25px rgba(0, 255, 0, 0.8); /* سایه درخشانش قوی‌تر میشه */
+    transform: scale(1.1); 
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.8); 
+
 }
